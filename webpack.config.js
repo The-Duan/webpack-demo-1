@@ -8,8 +8,11 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[contenthash].js'
     },
+    devServer: {
+        static: './dist',
+    },
     plugins: [new HtmlWebpackPlugin({
-        title: 'haha',
+        title: 'Development',
         template: 'src/assets/index.html'
     })],
     module: {
